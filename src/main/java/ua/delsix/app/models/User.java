@@ -1,21 +1,18 @@
 package ua.delsix.app.models;
 
-import java.util.Date;
-import java.util.Locale;
+import java.time.LocalDate;
 
 public class User {
     int id;
     String name;
-    Date date_of_registration;
+    LocalDate date_of_registration;
     String favoriteSong;
     String favoriteArtist;
 
-    public User(int id, String name, Date date_of_registration, String favoriteSong, String favoriteArtist) {
+    public User(int id, String name) {
         this.id = id;
         this.name = name;
-        this.date_of_registration = date_of_registration;
-        this.favoriteSong = favoriteSong;
-        this.favoriteArtist = favoriteArtist;
+        this.date_of_registration = LocalDate.now();
     }
 
     public int getId() {
@@ -34,11 +31,11 @@ public class User {
         this.name = name;
     }
 
-    public Date getDate_of_registration() {
+    public LocalDate getDate_of_registration() {
         return date_of_registration;
     }
 
-    public void setDate_of_registration(Date date_of_registration) {
+    public void setDate_of_registration(LocalDate date_of_registration) {
         this.date_of_registration = date_of_registration;
     }
 
