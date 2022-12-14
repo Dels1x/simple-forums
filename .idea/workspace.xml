@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf1bf773-b1bb-4e56-ae63-20406bf9ef56" name="Changes" comment="working on controllers">
+    <list default="true" id="bf1bf773-b1bb-4e56-ae63-20406bf9ef56" name="Changes" comment="Models @Valid implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/delsix/app/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/delsix/app/controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/delsix/app/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/delsix/app/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/delsix/app/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/delsix/app/dao/UserDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +158,7 @@
       <updated>1670963189956</updated>
       <workItem from="1670963192683" duration="2618000" />
       <workItem from="1670966175977" duration="2381000" />
-      <workItem from="1671029018139" duration="2278000" />
+      <workItem from="1671029018139" duration="3094000" />
     </task>
     <task id="LOCAL-00001" summary="post and user models completed">
       <created>1671029427912</created>
@@ -181,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671030897040</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Models @Valid implemented">
+      <created>1671031689842</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671031689842</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +209,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="post and user models completed" />
     <MESSAGE value="working on controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on controllers" />
+    <MESSAGE value="Models @Valid implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Models @Valid implemented" />
   </component>
 </project>

@@ -1,16 +1,32 @@
 package ua.delsix.app.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import ua.delsix.app.dao.UserDAO;
 import ua.delsix.app.models.User;
 
 import javax.validation.Valid;
 
 @Controller
 public class UsersController {
+
+    UserDAO userDAO;
+
+    @Autowired
+    public UsersController(UserDAO userDAO) {
+        this.userDAO = userDAO;
+    }
+
+    @GetMapping("/users")
+    public String index(Model model) {
+        model.addAttribute("users", userDAO.index());
+        return ""
+    }
 
     @GetMapping("/signup")
     public String newUser() {
