@@ -25,7 +25,7 @@ public class UsersController {
     @GetMapping("/users")
     public String index(Model model) {
         model.addAttribute("users", userDAO.index());
-        return ""
+        return "users/index";
     }
 
     @GetMapping("/signup")
