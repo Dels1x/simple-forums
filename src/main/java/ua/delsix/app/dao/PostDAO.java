@@ -6,7 +6,7 @@ import ua.delsix.app.models.Post;
 import java.util.List;
 
 @Component
-public class ForumsDAO {
+public class PostDAO {
     public List<Post> index() {
         return null;
     }
