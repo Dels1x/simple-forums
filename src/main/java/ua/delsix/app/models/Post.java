@@ -1,10 +1,16 @@
 package ua.delsix.app.models;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 public class Post {
     int id;
+    @NotNull(message="Subject needs to have actual content")
+    @Size(min=1, max=45, message="Title can't be longer than 45 symbols")
     String title;
+
+    @NotNull(message="Topic needs to have actual content")
     String content;
     Date date;
     User user;
