@@ -19,6 +19,12 @@ public class UserDAO {
     }
 
     public List<User> index() {
-        return jdbcTemplate.query("SELECT * FROM people", new BeanPropertyRowMapper<>(User.class));
+        return jdbcTemplate.query("SELECT * FROM app_user", new BeanPropertyRowMapper<>(User.class));
+    }
+
+    public User show(int id) {
+        return jdbcTemplate.queryForObject("SELECT * FROM app_user WHERE id=?",
+                new BeanPropertyRowMapper<>(User.class),
+                id);
     }
 }

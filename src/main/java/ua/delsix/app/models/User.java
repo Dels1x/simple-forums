@@ -19,11 +19,23 @@ public class User {
     String favoriteSong;
     String favoriteArtist;
 
+    public User() {
+    }
+
     public User(int id, String name, String email) {
         this.id = id;
         this.name = name;
         this.date_of_registration = LocalDate.now();
         this.email = email;
+    }
+
+    public User(int id, String name, String email, LocalDate date_of_registration, String favoriteSong, String favoriteArtist) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.date_of_registration = date_of_registration;
+        this.favoriteSong = favoriteSong;
+        this.favoriteArtist = favoriteArtist;
     }
 
     public int getId() {
