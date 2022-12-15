@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import ua.delsix.app.dao.UserDAO;
 import ua.delsix.app.models.User;
@@ -26,6 +27,12 @@ public class UsersController {
     public String index(Model model) {
         model.addAttribute("users", userDAO.index());
         return "users/index";
+    }
+
+    @GetMapping("users/{id}")
+    public String show(@PathVariable("id") int id, Model model) {
+        model.addAttribute("user", userDAO.show(id));
+        return "users/show";
     }
 
     @GetMapping("/signup")

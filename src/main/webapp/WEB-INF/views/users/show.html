@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${user.getName()} + '- Profile page'"></title>
+</head>
+<body>
+  <p th:text="${user.getId()}">user id</p>
+  <p th:text="${user.getName()}">user name</p>
+  <p th:text="${user.getEmail()}">user email</p>
+  <p th:text="${user.getDate_of_registration()}">user date</p>
+  <p th:text="${user.getFavoriteSong()}">user favorite song</p>
+  <p th:text="${user.getFavoriteArtist()}">user favorite artist</p>
+</body>
+</html>
