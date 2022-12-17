@@ -9,14 +9,19 @@ public class User {
 
     int id;
     @NotEmpty(message = "Name can't be empty")
-    @Size(min=2, max=25, message="Name should not be shorter than 2 symbols and not longer than 25")
+    @Size(min=2, max=25, message="Name must be longer than 2 symbols and shorter than 25")
     String name;
+    @NotEmpty(message = "Password can't be empty")
+    @Size(min=8, max=40, message="Password must be longer than 8 symbols and shorter than 40")
+    String password;
     @NotEmpty(message = "Email can't be empty")
     @Email(message = "Email must be valid")
     String email;
-    @NotEmpty
+
     LocalDate date_of_registration;
+    @Size(max=64, message="Song name is too long")
     String favoriteSong;
+    @Size(max=32, message="Artist name is too long")
     String favoriteArtist;
 
     public User() {
@@ -52,6 +57,14 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {

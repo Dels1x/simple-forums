@@ -36,12 +36,17 @@ public class UsersController {
     }
 
     @GetMapping("/signup")
-    public String newUser() {
-        return "forums/new";
+    public String newUser(@ModelAttribute("user") User user) {
+        return "users/new";
     }
 
-    @PostMapping
+    @PostMapping("/users")
     public String registration(@ModelAttribute @Valid User user, BindingResult bindingResult) {
-        return null;
+        if(bindingResult.hasErrors()) {
+            return "users/new";
+        }
+
+        userDAO.save(user);
+        return "redirect:/users";
     }
 }

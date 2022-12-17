@@ -27,4 +27,12 @@ public class UserDAO {
                 new BeanPropertyRowMapper<>(User.class),
                 id);
     }
+
+    public void save(User user) {
+        jdbcTemplate.update("INSERT INTO app_user (name, email, date_of_registration, password) VALUES" +
+                "(?, ?, NOW(), ?)",
+                user.getName(),
+                user.getEmail(),
+                user.getPassword());
+    }
 }
